@@ -148,8 +148,10 @@ def getMsgByMsgid(msgid:str) -> dict:
 def CheckFriendStatus(wxid:str, addType:int=6) -> str:
     '''检测好友状态'''
 
+def SearchFriend(phone:str) -> dict:
+    '''通过手机号或者微信号搜索用户'''
 
-
-
+def AddFriendByWxidOrV3(wxid:str, message:str, addType:int=6):
+    '''发送好友请求'''
 
 
