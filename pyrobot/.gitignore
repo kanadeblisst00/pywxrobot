@@ -1,4 +1,3 @@
 WECHAT_FILE/
 **__pycache__/
 plugins/finder_download_helper.py
-packages/wxcodeapi.py
