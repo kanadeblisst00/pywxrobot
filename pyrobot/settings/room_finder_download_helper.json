@@ -1,5 +1,5 @@
 {
-    "enable": true,
+    "enable": false,
     "rooms": ["视频号下载反馈", "测试区"],
     "admins": ["wxid_mp7earq22qtg22"]
 }

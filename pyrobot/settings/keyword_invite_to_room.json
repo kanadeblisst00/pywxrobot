@@ -1,5 +1,5 @@
 {
-    "enable": true,
+    "enable": false,
     "rules": {
         "视频号下载反馈": ["视频号群", "视频号下载"],
         "Python自动化交流": ["机器人群"]
