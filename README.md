@@ -76,7 +76,7 @@ CDN下载:
 
 #### 配置文件
 
-在config.ini里填写相应的配置：
+将`config_bak.ini`重命名位`config.ini`，然后在config.ini里填写相应的配置：
 
 - 授权码(`license`)
 
@@ -92,7 +92,8 @@ CDN下载:
 
 - .vscode: vscode的配置，用于配置语法提示
 - packages: 依赖的一些其他包可以放在这个目录，这个目录默认已经加到sys.path
-- plugins: 插件目录，可以是py文件或者文件夹(需包含__init__.py)。
+- plugins: 由pywxrobot的插件目录，可以是py文件或者文件夹(需包含__init__.py)。
+- other_plugins: 不依赖消息机制的插件
 - settings: 配置文件目录，文件名需和插件名一样
 - test: 没什么用，我写的一些测试脚本
 - .env: 可以设置packages的路径，这样引用packages里的包在vscode里就有语法提示了
@@ -100,6 +101,9 @@ CDN下载:
 - requirements.txt: 依赖包，编写版Python已经携带。如果想用安装版Python需要自己安装这些依赖
 
 #### 已有的插件列表
+
+
+**消息插件**: 
 
 * `auto_accept_friend.py`: 自动接受好友请求
 * `auto_download_file.py`: 自动下载聊天文件
@@ -115,6 +119,10 @@ CDN下载:
 * `keyword_invite_to_room.py`: 根据关键词邀请进群，会判断两个内容，聊天消息和加好友的验证消息
 * `sysmsg_manager.py`: 内置插件，不需要管
 * `xml_manager.py`: 内置插件，不需要管
+
+**其他插件**: 
+
+- `foreach_check_friends_status.py`: 检测所有好友状态(删除、拉黑和好友) 
 
 ## 如何开发
 
@@ -172,7 +180,7 @@ MsgType有以下属性:
 
 #### 如何主动调用函数
 
-导出微信函数的模块名是`wxfunc`，所有函数列表可以看`wxfunc.pyi`，[导出函数文档](/docs/wxfunc.md)
+导出微信函数的模块名是`wxfunc`，所有函数列表可以看`wxfunc.pyi`，使用案例请看docs目录下的文档
 
 例如你想在插件里发送文本消息:
 ```python

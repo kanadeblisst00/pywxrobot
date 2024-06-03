@@ -1,2 +1,4 @@
 **__pycache__/
 config.ini
+**log/
+*.csv
