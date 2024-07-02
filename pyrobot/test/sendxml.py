@@ -10,7 +10,7 @@ s = '''<msg>
         <type>5</type>
         <showtype>0</showtype>
         <content></content>
-        <url></url>
+        <url>https://mp.weixin.qq.com/s/amp;NSAh4wi2yf5838xypc8pzw</url>
         <dataurl></dataurl>
         <lowurl></lowurl>
         <lowdataurl></lowdataurl>
@@ -53,5 +53,4 @@ s = '''<msg>
     </appinfo>
 </msg>'''
 
-# wxfunc.SendXmlMsg("45380715750@chatroom", s)
-wxfunc.SendFileMsg("filehelper", r"D:\Downloads\0e3661c3cd006cc023b843516cdd12f6.mp4")
+wxfunc.SendXmlMsg("filehelper", s)

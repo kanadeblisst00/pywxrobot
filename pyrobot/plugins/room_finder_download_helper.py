@@ -56,7 +56,9 @@ class FinderDownloadHelper(MsgPluginTemplate):
             nonceid = root.find(".//objectNonceId").text
             video_info = self.get_finder_download_info(objectid, nonceid)
             if not video_info:
-                print(f"获取视频号的信息失败，objectid: {objectid}, nonceid: {nonceid}")
+                info = f"视频解析失败，objectid: {objectid}, nonceid: {nonceid}"
+                print(info)
+                wxfunc.SendTextMsg(sender, info)
                 return
             title = video_info["description"]
             publish_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(video_info["publish_time"]))
