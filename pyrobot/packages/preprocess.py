@@ -11,7 +11,7 @@ class PreDealmsg:
     def __init__(self) -> None:
         self._room_nicknames = {}
         contacts = dict(wxfunc.GetContactList())
-        self._contact_list = contacts["chatroom"] + contacts["friend"] + contacts["biz"]
+        self._contact_list = list(contacts["chatroom"]) + list(contacts["friend"]) + list(contacts["biz"])
         self._user_nicknames = {d["wxid"]:d.get('备注') or d.get("昵称") for d in self._contact_list}
         self._msg_type_dict = class_attrs_to_dict(MsgType)
         self._chatroom_nicknames = {d.get('备注') or d.get("昵称"):d["wxid"] for d in contacts["chatroom"]}
@@ -33,7 +33,7 @@ class PreDealmsg:
         sender_name = self._user_nicknames.get(wxid)
         if not sender_name:
             contacts = dict(wxfunc.GetContactList())
-            self._contact_list = contacts["chatroom"] + contacts["friend"] + contacts["biz"]
+            self._contact_list = list(contacts["chatroom"]) + list(contacts["friend"]) + list(contacts["biz"])
             self._user_nicknames = {d["wxid"]:d.get('备注') or d.get("昵称") for d in self._contact_list}
             self._user_nicknames["filehelper"] = "文件传输助手"
             sender_name = self._user_nicknames.get(wxid)
