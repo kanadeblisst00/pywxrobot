@@ -1,0 +1,1 @@
+.\pywxrobot.exe pyrobot\other_plugins\export_friends.py
