@@ -5,7 +5,7 @@ from typing import List
 
 
 def main():
-    ''''''
+    '''经群友测试，有一类好友是有感知的：你有他好友，但他把你删了并且他没有设置加好友权限，这会导致你直接加上他'''
     filter_list = [
         "medianote", # 语音记事本
         "floatbottle", # 漂流瓶
