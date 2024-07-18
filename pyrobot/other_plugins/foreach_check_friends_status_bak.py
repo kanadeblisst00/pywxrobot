@@ -27,12 +27,13 @@ def main():
             nickname = contact.get("昵称", "")
             wxh = contact.get("微信号", "")
             result = wxfunc.CheckFriendStatus(wxid)
-            print(wxid, nickname, result)
-            time.sleep(2)
-            if "好友" in result:
-                continue
+            # if "好友" in result:
+            #     continue
             f.write(f'{wxid},{wxh},{nickname},{result}\n')
             f.flush()
+            print(wxid, nickname, result)
+            time.sleep(2)
+           
     print(f"好友检测完成，检测结果文件(csv): {path}, 耗时: {time.time()-t0}")
 
 def test():
