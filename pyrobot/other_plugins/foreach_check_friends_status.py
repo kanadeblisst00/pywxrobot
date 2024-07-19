@@ -32,7 +32,8 @@ def main():
             f.write(f'{wxid},{wxh},{nickname},{result}\n')
             f.flush()
             print(wxid, nickname, result)
-            time.sleep(2)
+            # exe里加大了超时时间，所以这里可以不用等待那么久
+            time.sleep(0.1)
            
     print(f"好友检测完成，检测结果文件(csv): {path}, 耗时: {time.time()-t0}")
 
