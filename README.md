@@ -1,3 +1,7 @@
+## 新项目地址
+
+实现了一个新的机器人项目(免费的，但功能不多，只有我会用到的)：https://github.com/kanadeblisst00/pywxrobot2.0
+
 ## 简介
 
 Python的微信机器人，内核由C++编写，并使用aardio加载Python提供脚本扩展功能。C++内核不开源，只提供exe和Python写的扩展插件。
